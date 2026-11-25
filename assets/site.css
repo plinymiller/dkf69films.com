@@ -132,3 +132,4 @@ h3{font:700 1.35rem/1.15 var(--sans);text-transform:uppercase;letter-spacing:.04
 .ftr small{display:block;font:400 .78rem/1.5 var(--type);letter-spacing:.04em;margin-top:.4rem;color:#6f7a90}
 .credit a{color:var(--gold-2);text-decoration:none}
 .credit a:hover{text-decoration:underline}
+.pm-loc{white-space:nowrap}.pm-mark{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;margin:0 .15em}
