@@ -1,231 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DKF69FILMS | Adirondack film archive</title>
-<meta name="description" content="DKF69FILMS is an Adirondack film and video production label. The archive will include 1985 Saranac Lake JV football game film and SCL marching band performances, each finishing as an ADKDon Production.">
+<title>DKF69FILMS · Home Video Recovery &amp; Restoration · Saranac Lake, N.Y.</title>
+<meta name="description" content="DKF69FILMS recovers, identifies and restores old home video from Saranac Lake, N.Y., and cuts it into titled films. Case file: the 1985 Saranac Lake JV football season. An ADKDon Production.">
 <link rel="canonical" href="https://dkf69films.com/">
-<meta name="author" content="DKF69FILMS">
-<meta name="theme-color" content="#100e0c">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DKF69FILMS">
-<meta property="og:title" content="DKF69FILMS | Adirondack film archive">
-<meta property="og:description" content="A production label for local film and video from the Adirondacks.">
+<meta property="og:title" content="DKF69FILMS · Old tapes. Cold cases. Recovered.">
+<meta property="og:description" content="Home video recovery and restoration from Saranac Lake, N.Y. An ADKDon Production.">
 <meta property="og:url" content="https://dkf69films.com/">
-<meta property="og:image" content="https://dkf69films.com/apple-touch-icon.png">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #100e0c;
-    --bg-2: #1a1612;
-    --cream: #f0e6d0;
-    --muted: #b9a990;
-    --gold: #d7b07a;
-    --line: #3a3228;
-    --card: #191510;
-    --rail: 36px;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--cream);
-    font: 18px/1.55 "Source Serif 4", Georgia, "Times New Roman", serif;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
-  }
-  .rail {
-    position: fixed;
-    top: 0; bottom: 0;
-    width: var(--rail);
-    background-color: #070605;
-    background-image: radial-gradient(ellipse 7px 6px at 50% 12px, var(--bg) 0 6px, transparent 7px);
-    background-size: 100% 28px;
-    z-index: 4;
-    pointer-events: none;
-  }
-  .rail.left { left: 0; border-right: 1px solid #2a241c; }
-  .rail.right { right: 0; border-left: 1px solid #2a241c; }
-  .grain {
-    pointer-events: none;
-    position: fixed;
-    inset: 0;
-    z-index: 5;
-    opacity: 0.07;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.78  0 0 0 0.7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  }
-  a { color: var(--gold); text-decoration-color: rgba(215,176,122,0.45); text-underline-offset: 3px; }
-  a:hover { color: var(--cream); }
-  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-  .skip {
-    position: absolute; left: -999px; top: 0;
-    background: var(--gold); color: var(--bg); padding: 8px 12px; z-index: 10;
-  }
-  .skip:focus { left: calc(var(--rail) + 16px); top: 12px; }
-  .wrap {
-    width: min(920px, calc(100% - (var(--rail) * 2) - 48px));
-    margin: 0 auto;
-    padding: 0 0 72px;
-  }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 28px 0 8px;
-  }
-  .logo { display: block; width: min(420px, 72vw); height: auto; }
-  nav { display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
-  nav a { color: var(--muted); text-decoration: none; padding: 8px 0 2px; border-bottom: 1px solid transparent; }
-  nav a:hover { color: var(--cream); border-bottom-color: var(--gold); }
-  .hero { padding: 56px 0 28px; }
-  .kicker {
-    margin: 0 0 22px;
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-  .lede { margin: 0; max-width: 36em; font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-weight: 400; line-height: 1.45; color: var(--cream); }
-  section { padding: 40px 0 8px; border-top: 1px solid var(--line); margin-top: 28px; }
-  h2 {
-    margin: 0 0 22px;
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-  .films { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    min-height: 220px;
-    padding: 18px 18px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-  }
-  .card::before {
-    content: "";
-    display: block;
-    height: 110px;
-    margin: -18px -18px 16px;
-    background:
-      linear-gradient(180deg, rgba(215,176,122,0.07), transparent 60%),
-      repeating-linear-gradient(90deg, #070605 0 10px, #1c1813 10px 12px, #070605 12px 22px);
-    border-bottom: 1px solid var(--line);
-  }
-  .card h3 { margin: 0 0 6px; font-size: 1.15rem; font-weight: 600; letter-spacing: 0.01em; }
-  .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-  .card .tag {
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-top: 12px;
-  }
-  .about p { margin: 0 0 1em; max-width: 40em; color: #e4d8c2; }
-  .about p:last-child { margin-bottom: 0; }
-  .contact a { font-size: 1.2rem; }
-  footer {
-    width: min(920px, calc(100% - (var(--rail) * 2) - 48px));
-    margin: 48px auto 0;
-    padding: 22px 0 36px;
-    border-top: 1px solid var(--line);
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px 32px;
-    flex-wrap: wrap;
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(215,176,122,0.5); padding-bottom: 1px; }
-  footer a:hover { color: var(--cream); }
-  @media (max-width: 800px) {
-    :root { --rail: 16px; }
-    .wrap, footer { width: calc(100% - (var(--rail) * 2) - 28px); }
-    header { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .films { grid-template-columns: 1fr; }
-    .card { min-height: 0; }
-    .hero { padding-top: 36px; }
-  }
-</style>
+<meta property="og:image" content="https://dkf69films.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DKF69FILMS badge over a 1985 VHS football still">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DKF69FILMS · Old tapes. Cold cases. Recovered.">
+<meta name="twitter:description" content="Home video recovery and restoration from Saranac Lake, N.Y. An ADKDon Production.">
+<meta name="twitter:image" content="https://dkf69films.com/assets/img/og.jpg">
+<link rel="preload" href="/assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/img/hero-huddle.jpg" as="image" fetchpriority="high">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"DKF69FILMS","url":"https://dkf69films.com/","logo":"https://dkf69films.com/apple-touch-icon.png","description":"Home video recovery and restoration from Saranac Lake, N.Y. An ADKDon Production."}
+</script>
 </head>
 <body>
-  <div class="rail left" aria-hidden="true"></div>
-  <div class="rail right" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-  <a class="skip" href="#films">Skip to films</a>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip" role="note">DKF69FILMS · Case files · Home video recovery</div>
+
+<header class="hdr">
   <div class="wrap">
-    <header>
-      <a href="#top" id="top"><img class="logo" src="logo.svg" width="1200" height="252" alt="DKF69FILMS"></a>
-      <nav aria-label="Page">
-        <a href="#films">Films</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-    <div class="hero">
-      <p class="kicker">Adirondack film archive</p>
-      <p class="lede">A production label for local film and video &mdash; game film, marching band, and the work that follows. Each picture ends the same way: <em>an ADKDon Production</em>.</p>
-    </div>
-    <section id="films">
-      <h2>Films</h2>
-      <div class="films">
-        <article class="card">
-          <div>
-            <h3>1985 JV Football</h3>
-            <p>Saranac Lake game film, with title, matchup date, and the final score on screen.</p>
-          </div>
-          <p class="tag">YouTube link coming soon</p>
-        </article>
-        <article class="card">
-          <div>
-            <h3>SCL Marching Band</h3>
-            <p>Performances from the Saranac Lake High School marching band archive.</p>
-          </div>
-          <p class="tag">YouTube link coming soon</p>
-        </article>
-        <article class="card">
-          <div>
-            <h3>From the archive</h3>
-            <p>More titles will be listed here as the transfers are finished and posted.</p>
-          </div>
-          <p class="tag">Placeholder</p>
-        </article>
-      </div>
-    </section>
-    <section id="about" class="about">
-      <h2>About</h2>
-      <p>DKF69FILMS is a film and video production label rooted in the Adirondacks. The catalog begins with restored local pictures: the 1985 Saranac Lake JV football season, and marching band performances from the same school community.</p>
-      <p>Work released under this label carries the closing credit <a href="https://adkdon.com/">an ADKDon Production</a>. This page will be updated as those transfers go up on YouTube.</p>
-    </section>
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p><a href="mailto:admin@dkf69films.com">admin@dkf69films.com</a></p>
-    </section>
+    <a class="brand" href="/" aria-label="DKF69FILMS home">
+      <img src="/assets/badge.svg" alt="" width="34" height="40">
+      <b>DKF69<span>FILMS</span></b>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#case-files">Case Files</a></li>
+        <li><a href="#tip-line">Tip Line</a></li>
+        <li><a href="#archive">Archive</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+      </ul>
+    </nav>
   </div>
-  <footer>
-    <span>DKF69FILMS</span>
-    <a href="https://plinymiller.com/">a plinymiller design</a>
-  </footer>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="bg" src="/assets/img/hero-huddle.jpg" alt="" width="1280" height="960" fetchpriority="high">
+    <span class="stamp" aria-hidden="true">Declassified</span>
+    <div class="wrap">
+      <p class="kicker">File No. DKF-69 &nbsp;//&nbsp; Home video recovery</p>
+      <h1 id="hero-title">Old tapes. <em>Cold cases.</em> Recovered.</h1>
+      <p class="lede">DKF69FILMS digitizes, identifies and restores old home video from Saranac Lake, N.Y., then cuts it into titled films you can actually sit down and watch. An ADKDon Production.</p>
+      <div class="btns">
+        <a class="btn" href="#case-files">Open the case files</a>
+        <a class="btn ghost" href="#tip-line">Report a tape</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-files" aria-labelledby="cf-title">
+    <div class="wrap">
+      <div class="sec-hd"><span class="no">01 //</span><h2 id="cf-title">Case Files</h2></div>
+
+      <article class="folder" data-tab="Case No. 1985-JV" aria-labelledby="case-1985">
+        <span class="stamp" aria-hidden="true">Restored</span>
+        <h3 id="case-1985">1985 Saranac Lake JV Football</h3>
+        <dl class="meta">
+          <div><dt>Subject</dt><dd>Saranac Lake JV football, 1985 season</dd></div>
+          <div><dt>Source</dt><dd>VHS transfers, tapes 1 &amp; 3 of 3</dd></div>
+          <div><dt>Season result</dt><dd>Division I champions (7-1-1)</dd></div>
+          <div><dt>Status</dt><dd>4 games restored · release pending</dd></div>
+        </dl>
+        <p>The 1985 JV season came in as raw VHS transfers. Each game on the tapes was matched against the Adirondack Daily Enterprise's reported scores, cleaned up, and cut into its own film: a title card, the game footage, a final-score card citing its newspaper source, and the DKF69FILMS credit.</p>
+
+        <div class="exhibits">
+          <figure class="exhibit" style="--r:-1.2deg">
+            <img src="/assets/img/still-1.jpg" alt="Players at the line of scrimmage, vs. Peru, 1985 (VHS still)" width="640" height="480" loading="lazy" decoding="async">
+            <figcaption><b>Exhibit A</b>vs. Peru · Sept. 14, 1985</figcaption>
+          </figure>
+          <figure class="exhibit" style="--r:.8deg">
+            <img src="/assets/img/still-3.jpg" alt="A play in progress, at Saranac, 1985 (VHS still)" width="640" height="480" loading="lazy" decoding="async">
+            <figcaption><b>Exhibit B</b>at Saranac · Nov. 2, 1985</figcaption>
+          </figure>
+          <figure class="exhibit" style="--r:-.6deg">
+            <img src="/assets/img/still-2.jpg" alt="Players on the field at Mount Assumption, 1985 (VHS still)" width="640" height="480" loading="lazy" decoding="async">
+            <figcaption><b>Exhibit C</b>at Mount Assumption · Nov. 9, 1985</figcaption>
+          </figure>
+        </div>
+
+        <table class="log">
+          <caption>Game log · restored films</caption>
+          <thead><tr><th scope="col">Date</th><th scope="col">Opponent</th><th scope="col">Final</th><th scope="col">Score source</th></tr></thead>
+          <tbody>
+            <tr><td>Sat., Sept. 14, 1985</td><td>vs. Peru</td><td class="score">SL 30, Peru 0</td><td>Adirondack Daily Enterprise, Sept. 16, 1985</td></tr>
+            <tr><td>Sat., Sept. 28, 1985</td><td>vs. St. John's <br><span class="tag warn">Opponent ID pending</span></td><td class="score">SL 44, St. John's 8</td><td>Adirondack Daily Enterprise, Sept. 30, 1985</td></tr>
+            <tr><td>Sat., Nov. 2, 1985</td><td>at Saranac</td><td class="score">SL 30, Saranac 16</td><td>Adirondack Daily Enterprise, Nov. 5, 1985</td></tr>
+            <tr><td>Sat., Nov. 9, 1985</td><td>at Mount Assumption <br><span class="tag">Division I title clincher</span></td><td class="score">SL 45, MAI 0</td><td>Adirondack Daily Enterprise, Nov. 12, 1985</td></tr>
+          </tbody>
+        </table>
+
+        <div class="missing" role="note">
+          <strong>Evidence missing:</strong> tape 2 of 3. The middle tape of the 1985 JV season has not turned up, so the rest of that season's games are still unaccounted for. If it's sitting in your basement, <a href="#tip-line">file a tip</a>.
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="tip-line" class="tip" aria-labelledby="tip-title">
+    <div class="wrap">
+      <div>
+        <div class="sec-hd"><span class="no">02 //</span><h2 id="tip-title">Tip Line</h2></div>
+        <p>Got old VHS tapes, camcorder cassettes or DVDs of games, carnivals, graduations or family events? Know where tape 2 of the 1985 JV season ended up? Send the details and we'll take a look.</p>
+      </div>
+      <div class="card">
+        <h3>File a tip</h3>
+        <ul>
+          <li>What's on it (event, year, if known)</li>
+          <li>Format (VHS, VHS-C, Hi8, DVD…)</li>
+          <li>How many tapes or discs</li>
+        </ul>
+        <a class="btn" href="mailto:info@b-tuff.co?subject=DKF69FILMS%20tip">Email the tip line</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="archive" aria-labelledby="ar-title">
+    <div class="wrap">
+      <div class="sec-hd"><span class="no">03 //</span><h2 id="ar-title">The Archive</h2></div>
+      <p class="intro">Well over a hundred digitized tapes and discs, most of them Saranac Lake from the 1980s and early '90s. Each one is a file waiting to be worked.</p>
+      <div class="grid">
+        <div class="cell"><span class="code">EVIDENCE · FB</span><h3>Football</h3><p>Saranac Lake High School varsity and JV games, mid-to-late 1980s.</p></div>
+        <div class="cell"><span class="code">EVIDENCE · HK</span><h3>Hockey</h3><p>Saranac Lake varsity hockey from the late 1980s.</p></div>
+        <div class="cell"><span class="code">EVIDENCE · WC</span><h3>Winter Carnival</h3><p>Coronations, parades and slide shows from several Carnival years.</p></div>
+        <div class="cell"><span class="code">EVIDENCE · GR</span><h3>Graduations &amp; Proms</h3><p>Commencements, grad picnics, proms and homecomings.</p></div>
+        <div class="cell"><span class="code">EVIDENCE · EV</span><h3>Shows &amp; Reunions</h3><p>Civic Center ice shows, school productions and class reunions.</p></div>
+        <div class="cell"><span class="code">EVIDENCE · AD</span><h3>Adirondack Life</h3><p>Guideboats, lake days and trips out of town.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="procedure" aria-labelledby="pr-title">
+    <div class="wrap">
+      <div class="sec-hd"><span class="no">04 //</span><h2 id="pr-title">Procedure</h2></div>
+      <ol class="steps">
+        <li><div><h3>Intake</h3><p>Tapes and discs are logged by title, label and length before anything is touched.</p></div></li>
+        <li><div><h3>Digitize</h3><p>Each source is transferred to a digital master so the original never has to play again.</p></div></li>
+        <li><div><h3>Identify</h3><p>Footage is broken into scenes and matched to dates, opponents and scores using period newspapers.</p></div></li>
+        <li><div><h3>Restore &amp; cut</h3><p>Light cleanup of tape noise, then a titled film for each event, with sourced score and credit cards.</p></div></li>
+        <li><div><h3>Deliver</h3><p>Finished films are shared privately, such as unlisted video links, with the digital masters kept safe.</p></div></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/" aria-label="DKF69FILMS home"><img src="/assets/badge.svg" alt="" width="28" height="33" loading="lazy"><b>DKF69<span>FILMS</span></b></a>
+      <small>An ADKDon Production · © 2026 DKF69FILMS<br>A private production label. Badge and case-file styling are decorative; not affiliated with any government or law-enforcement agency.</small>
+    </div>
+    <div>
+      <a href="https://b-tuff.co/">B-Tuff LLC</a>
+      <small class="credit"><a href="https://plinymiller.com">a plinymiller design</a></small>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

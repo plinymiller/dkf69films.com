@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="DKF69FILMS badge">
+  <path d="M60 4 112 22v40c0 36-22 62-52 74C30 124 8 98 8 62V22Z" fill="#0b1426" stroke="#c9a227" stroke-width="5"/>
+  <path d="M60 16 101 30v32c0 29-17 50-41 61C36 112 19 91 19 62V30Z" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M60 34l6.5 13.2 14.5 2.1-10.5 10.2 2.5 14.5L60 67.2l-13 6.8 2.5-14.5L39 49.3l14.5-2.1Z" fill="#c9a227"/>
+  <text x="60" y="98" text-anchor="middle" font-family="Oswald,Arial Narrow,sans-serif" font-weight="700" font-size="17" letter-spacing="1" fill="#f3ead2">DKF69</text>
+  <text x="60" y="112" text-anchor="middle" font-family="Oswald,Arial Narrow,sans-serif" font-weight="500" font-size="8.5" letter-spacing="3" fill="#c9a227">FILMS</text>
+</svg>
