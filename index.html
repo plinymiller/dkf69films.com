@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DKF69FILMS | Adirondack film archive</title>
+<meta name="description" content="DKF69FILMS is an Adirondack film and video production label. The archive will include 1985 Saranac Lake JV football game film and SCL marching band performances, each finishing as an ADKDon Production.">
+<link rel="canonical" href="https://dkf69films.com/">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="DKF69FILMS">
+<meta name="theme-color" content="#100e0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DKF69FILMS">
+<meta property="og:title" content="DKF69FILMS | Adirondack film archive">
+<meta property="og:description" content="A production label for local film and video from the Adirondacks.">
+<meta property="og:url" content="https://dkf69films.com/">
+<meta property="og:image" content="https://dkf69films.com/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #100e0c;
+    --bg-2: #1a1612;
+    --cream: #f0e6d0;
+    --muted: #b9a990;
+    --gold: #d7b07a;
+    --line: #3a3228;
+    --card: #191510;
+    --rail: 36px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--cream);
+    font: 18px/1.55 "Source Serif 4", Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .rail {
+    position: fixed;
+    top: 0; bottom: 0;
+    width: var(--rail);
+    background-color: #070605;
+    background-image: radial-gradient(ellipse 7px 6px at 50% 12px, var(--bg) 0 6px, transparent 7px);
+    background-size: 100% 28px;
+    z-index: 4;
+    pointer-events: none;
+  }
+  .rail.left { left: 0; border-right: 1px solid #2a241c; }
+  .rail.right { right: 0; border-left: 1px solid #2a241c; }
+  .grain {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.78  0 0 0 0.7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  a { color: var(--gold); text-decoration-color: rgba(215,176,122,0.45); text-underline-offset: 3px; }
+  a:hover { color: var(--cream); }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .skip {
+    position: absolute; left: -999px; top: 0;
+    background: var(--gold); color: var(--bg); padding: 8px 12px; z-index: 10;
+  }
+  .skip:focus { left: calc(var(--rail) + 16px); top: 12px; }
+  .wrap {
+    width: min(920px, calc(100% - (var(--rail) * 2) - 48px));
+    margin: 0 auto;
+    padding: 0 0 72px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 0 8px;
+  }
+  .logo { display: block; width: min(420px, 72vw); height: auto; }
+  nav { display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+  nav a { color: var(--muted); text-decoration: none; padding: 8px 0 2px; border-bottom: 1px solid transparent; }
+  nav a:hover { color: var(--cream); border-bottom-color: var(--gold); }
+  .hero { padding: 56px 0 28px; }
+  .kicker {
+    margin: 0 0 22px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .lede { margin: 0; max-width: 36em; font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-weight: 400; line-height: 1.45; color: var(--cream); }
+  section { padding: 40px 0 8px; border-top: 1px solid var(--line); margin-top: 28px; }
+  h2 {
+    margin: 0 0 22px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .films { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    min-height: 220px;
+    padding: 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .card::before {
+    content: "";
+    display: block;
+    height: 110px;
+    margin: -18px -18px 16px;
+    background:
+      linear-gradient(180deg, rgba(215,176,122,0.07), transparent 60%),
+      repeating-linear-gradient(90deg, #070605 0 10px, #1c1813 10px 12px, #070605 12px 22px);
+    border-bottom: 1px solid var(--line);
+  }
+  .card h3 { margin: 0 0 6px; font-size: 1.15rem; font-weight: 600; letter-spacing: 0.01em; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .card .tag {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 12px;
+  }
+  .about p { margin: 0 0 1em; max-width: 40em; color: #e4d8c2; }
+  .about p:last-child { margin-bottom: 0; }
+  .contact a { font-size: 1.2rem; }
+  footer {
+    width: min(920px, calc(100% - (var(--rail) * 2) - 48px));
+    margin: 48px auto 0;
+    padding: 22px 0 36px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px 32px;
+    flex-wrap: wrap;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(215,176,122,0.5); padding-bottom: 1px; }
+  footer a:hover { color: var(--cream); }
+  @media (max-width: 800px) {
+    :root { --rail: 16px; }
+    .wrap, footer { width: calc(100% - (var(--rail) * 2) - 28px); }
+    header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .films { grid-template-columns: 1fr; }
+    .card { min-height: 0; }
+    .hero { padding-top: 36px; }
+  }
+</style>
+</head>
+<body>
+  <div class="rail left" aria-hidden="true"></div>
+  <div class="rail right" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <a class="skip" href="#films">Skip to films</a>
+  <div class="wrap">
+    <header>
+      <a href="#top" id="top"><img class="logo" src="logo.svg" width="1200" height="252" alt="DKF69FILMS"></a>
+      <nav aria-label="Page">
+        <a href="#films">Films</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <div class="hero">
+      <p class="kicker">Adirondack film archive</p>
+      <p class="lede">A production label for local film and video &mdash; game film, marching band, and the work that follows. Each picture ends the same way: <em>an ADKDon Production</em>.</p>
+    </div>
+    <section id="films">
+      <h2>Films</h2>
+      <div class="films">
+        <article class="card">
+          <div>
+            <h3>1985 JV Football</h3>
+            <p>Saranac Lake game film, with title, matchup date, and the final score on screen.</p>
+          </div>
+          <p class="tag">YouTube link coming soon</p>
+        </article>
+        <article class="card">
+          <div>
+            <h3>SCL Marching Band</h3>
+            <p>Performances from the Saranac Lake High School marching band archive.</p>
+          </div>
+          <p class="tag">YouTube link coming soon</p>
+        </article>
+        <article class="card">
+          <div>
+            <h3>From the archive</h3>
+            <p>More titles will be listed here as the transfers are finished and posted.</p>
+          </div>
+          <p class="tag">Placeholder</p>
+        </article>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>DKF69FILMS is a film and video production label rooted in the Adirondacks. The catalog begins with restored local pictures: the 1985 Saranac Lake JV football season, and marching band performances from the same school community.</p>
+      <p>Work released under this label carries the closing credit <a href="https://adkdon.com/">an ADKDon Production</a>. This page will be updated as those transfers go up on YouTube.</p>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:admin@dkf69films.com">admin@dkf69films.com</a></p>
+    </section>
+  </div>
+  <footer>
+    <span>DKF69FILMS</span>
+    <a href="https://plinymiller.com/">a plinymiller design</a>
+  </footer>
+</body>
+</html>
